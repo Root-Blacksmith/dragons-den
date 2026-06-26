@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Dragon's Den, Upper Lake</title>
+  <meta name="description" content="Who started Dragon's Den, why, and what it's for. Whether you've rolled dice for thirty years or never once, there's a chair at the table for you." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-about">
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Dragon's Den home">
+        <img class="brand__logo" src="images/logo.png" alt="Dragon's Den logo" data-logo />
+        <span>
+          <span class="brand__name">Dragon&rsquo;s Den</span>
+          <span class="brand__sub">Upper Lake, CA</span>
+        </span>
+      </a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="is-active">About</a></li>
+        <li><a href="raffles.html">Raffles</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="new.html">New Stuff</a></li>
+        <li class="nav__cta"><a href="events.html">This Week</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">
+          <svg class="d20" viewBox="0 0 64 64" aria-hidden="true"><polygon points="32,4 56,18 56,46 32,60 8,46 8,18" fill="#1a120c" stroke="#f3c244" stroke-width="3" stroke-linejoin="round"/><polygon points="32,4 56,18 32,30 8,18" fill="#241810"/><text x="32" y="42" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="20" fill="#ffd76a">20</text></svg>
+          About Us
+        </p>
+        <h1 class="section-title">A shop with a heartbeat</h1>
+        <p class="lede">Dragon&rsquo;s Den is a tabletop game shop in Upper Lake. Cards, dice, miniatures, and more than any of that, the tables to play them on.</p>
+
+        <hr class="rule" />
+
+        <div class="grid grid--2" style="gap:2rem;align-items:start">
+          <div>
+            <h2>Why we&rsquo;re here</h2>
+            <p><span class="tk">[Tell the real story here.]</span> The honest version, not corporate filler. Who started Dragon&rsquo;s Den, and the night the idea wouldn&rsquo;t let go. A back table, a borrowed rulebook, a town that didn&rsquo;t have a place like this yet.</p>
+            <p>We opened the Den so this corner of Lake County would have a room where the game comes first and everything happens face to face, around a table, not a screen.</p>
+          </div>
+          <div>
+            <h2>Who runs it</h2>
+            <p><span class="tk">[Names and a few honest lines.]</span> The people behind the counter, what they love to play, and why they&rsquo;ll happily talk your ear off about it. The card shark, the painter, the forever-GM.</p>
+            <p>Ask us anything. We&rsquo;d rather teach you a game than sell you one you won&rsquo;t open.</p>
+          </div>
+        </div>
+
+        <hr class="rule" />
+
+        <div class="card" style="border-left:3px solid var(--ruby)">
+          <h2 style="margin-top:0">There&rsquo;s a chair for you</h2>
+          <p style="margin-bottom:0">Whether you&rsquo;ve rolled dice for thirty years or never once in your life, you belong at one of our tables. The scariest part of walking into a game shop is feeling like everyone already knows each other. Here, somebody will wave you over. That&rsquo;s the whole point of the place.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== To the door ===== -->
+    <section class="door-band">
+      <div class="container">
+        <p class="eyebrow">Come Visit</p>
+        <h2>You&rsquo;ve decided you like us. Now come see the place.</h2>
+        <p class="hours-line"><span class="tk">[HOURS]</span></p>
+        <p class="addr-line"><span class="tk">[ADDRESS]</span> &middot; Upper Lake, California</p>
+        <a class="btn" href="events.html">See what&rsquo;s on this week</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="images/logo.png" alt="" data-logo data-fallback-class="brand__logo" />
+            <strong style="font-family:'Cinzel',serif;color:var(--ink)">Dragon&rsquo;s Den</strong>
+          </div>
+          <p>A tabletop game shop in Upper Lake. Cards, dice, miniatures, and the tables to play them on. Everything happens face to face, around a table.</p>
+        </div>
+        <div>
+          <h4>Find Us</h4>
+          <p><span class="tk">[ADDRESS]</span></p>
+          <p>Upper Lake, California</p>
+          <p><a href="tel:"><span class="tk">[PHONE]</span></a></p>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <p><span class="tk">[HOURS]</span></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Dragon&rsquo;s Den &middot; Upper Lake, CA</span>
+        <span>Come roll with us.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

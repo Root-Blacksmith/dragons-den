@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events | Dragon's Den, Upper Lake</title>
+  <meta name="description" content="The weekly slate at Dragon's Den. Game nights, campaigns, painting evenings, plus the one-off tournaments and release parties. Beginner-friendly nights marked." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-events">
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Dragon's Den home">
+        <img class="brand__logo" src="images/logo.png" alt="Dragon's Den logo" data-logo />
+        <span>
+          <span class="brand__name">Dragon&rsquo;s Den</span>
+          <span class="brand__sub">Upper Lake, CA</span>
+        </span>
+      </a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="raffles.html">Raffles</a></li>
+        <li><a href="events.html" class="is-active">Events</a></li>
+        <li><a href="new.html">New Stuff</a></li>
+        <li class="nav__cta"><a href="events.html">This Week</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">
+          <svg class="d20" viewBox="0 0 64 64" aria-hidden="true"><polygon points="32,4 56,18 56,46 32,60 8,46 8,18" fill="#1a120c" stroke="#f3c244" stroke-width="3" stroke-linejoin="round"/><polygon points="32,4 56,18 32,30 8,18" fill="#241810"/><text x="32" y="42" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="20" fill="#ffd76a">20</text></svg>
+          Events
+        </p>
+        <h1 class="section-title">Every night has a table</h1>
+        <p class="lede">Learn the rhythm of the week. Nights marked <span class="tag tag--beginner">Beginner-friendly</span> are the easy door in. No one expects you to know anyone.</p>
+
+        <!-- ===== Weekly slate ===== -->
+        <h2 style="margin-top:2rem">The weekly slate</h2>
+        <div class="events" style="margin-top:1rem">
+          <div class="event">
+            <div class="event__when">
+              <span class="event__day">Wednesday</span>
+              <span class="event__time"><span class="tk">[time]</span></span>
+            </div>
+            <div class="event__body">
+              <h3>Board Game Open Night <span class="tag tag--beginner">Beginner-friendly</span></h3>
+              <p>Pull anything off the shelf and play. We&rsquo;ll teach the rules. The gentlest way to meet the regulars. <span class="tk">[edit]</span></p>
+            </div>
+          </div>
+          <div class="event">
+            <div class="event__when">
+              <span class="event__day">Friday</span>
+              <span class="event__time"><span class="tk">[time]</span></span>
+            </div>
+            <div class="event__body">
+              <h3>Commander &amp; Card Night</h3>
+              <p>The big card night. Bring a deck or borrow one of ours. Casual pods, all skill levels. <span class="tk">[edit]</span></p>
+            </div>
+          </div>
+          <div class="event">
+            <div class="event__when">
+              <span class="event__day">Saturday</span>
+              <span class="event__time"><span class="tk">[time]</span></span>
+            </div>
+            <div class="event__body">
+              <h3>Weekend Campaign</h3>
+              <p>The ongoing tabletop RPG table. <span class="tk">[Drop-in or session-zero details here.]</span> <span class="tk">[edit]</span></p>
+            </div>
+          </div>
+          <div class="event">
+            <div class="event__when">
+              <span class="event__day">Sunday</span>
+              <span class="event__time"><span class="tk">[time]</span></span>
+            </div>
+            <div class="event__body">
+              <h3>Paint &amp; Chat <span class="tag tag--beginner">Beginner-friendly</span></h3>
+              <p>Bring your miniatures and paints, or try ours. Quiet, friendly, no pressure. <span class="tk">[edit]</span></p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="rule" />
+
+        <!-- ===== One-offs ===== -->
+        <h2>Special nights &amp; one-offs</h2>
+        <p class="lede">Tournaments, release parties, and the things that aren&rsquo;t every week.</p>
+        <div class="grid grid--3" style="margin-top:1.2rem">
+          <div class="card">
+            <span class="tag tag--live">Don&rsquo;t miss</span>
+            <h3 style="margin-top:0.6rem"><span class="tk">[Event name]</span></h3>
+            <p class="card__meta"><span class="tk">[date &amp; time]</span></p>
+            <p class="soft"><span class="tk">[One line on what it is and who it's for.]</span></p>
+          </div>
+          <div class="card">
+            <h3><span class="tk">[Event name]</span></h3>
+            <p class="card__meta"><span class="tk">[date &amp; time]</span></p>
+            <p class="soft"><span class="tk">[One line on what it is and who it's for.]</span></p>
+          </div>
+          <div class="card">
+            <h3><span class="tk">[Event name]</span></h3>
+            <p class="card__meta"><span class="tk">[date &amp; time]</span></p>
+            <p class="soft"><span class="tk">[One line on what it is and who it's for.]</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== To the door ===== -->
+    <section class="door-band">
+      <div class="container">
+        <p class="eyebrow">Come In</p>
+        <h2>Now you know where to be. We&rsquo;ll save you a seat.</h2>
+        <p class="hours-line"><span class="tk">[HOURS]</span></p>
+        <p class="addr-line"><span class="tk">[ADDRESS]</span> &middot; Upper Lake, California</p>
+        <a class="btn" href="new.html">See what just landed</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="images/logo.png" alt="" data-logo data-fallback-class="brand__logo" />
+            <strong style="font-family:'Cinzel',serif;color:var(--ink)">Dragon&rsquo;s Den</strong>
+          </div>
+          <p>A tabletop game shop in Upper Lake. Cards, dice, miniatures, and the tables to play them on. Everything happens face to face, around a table.</p>
+        </div>
+        <div>
+          <h4>Find Us</h4>
+          <p><span class="tk">[ADDRESS]</span></p>
+          <p>Upper Lake, California</p>
+          <p><a href="tel:"><span class="tk">[PHONE]</span></a></p>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <p><span class="tk">[HOURS]</span></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Dragon&rsquo;s Den &middot; Upper Lake, CA</span>
+        <span>Come roll with us.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
