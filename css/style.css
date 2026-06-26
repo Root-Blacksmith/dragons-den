@@ -63,11 +63,10 @@ body {
   line-height: 1.65;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
-  /* faint neon wash at the very top, like signage spill on a white wall */
+  /* pop-art halftone dot print across the whole wall */
   background-image:
-    radial-gradient(900px 360px at 12% -8%, rgba(255, 20, 147, 0.07), transparent 70%),
-    radial-gradient(900px 360px at 92% -6%, rgba(0, 229, 255, 0.08), transparent 70%);
-  background-repeat: no-repeat;
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28'%3E%3Ccircle cx='6' cy='6' r='2.4' fill='%23FF1493' opacity='0.10'/%3E%3Ccircle cx='20' cy='20' r='2.4' fill='%2300E5FF' opacity='0.10'/%3E%3C/svg%3E");
+  background-repeat: repeat;
 }
 
 h1, h2, h3, .display {
@@ -595,4 +594,80 @@ img { max-width: 100%; display: block; }
   .grid--3, .grid--4, .doors, .glance, .winners, .grid--2 { grid-template-columns: 1fr; }
   .event { grid-template-columns: 1fr; gap: 0.4rem; }
   .footer-grid { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   Pop-art / graffiti background graphics
+   ========================================================= */
+
+/* big soft neon paint blobs drifting behind everything */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -12%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(22vw 22vw at 12% 16%, rgba(255, 20, 147, 0.34), transparent 70%),
+    radial-gradient(26vw 26vw at 88% 10%, rgba(0, 229, 255, 0.32), transparent 70%),
+    radial-gradient(24vw 24vw at 80% 84%, rgba(255, 215, 0, 0.30), transparent 70%),
+    radial-gradient(22vw 22vw at 14% 88%, rgba(34, 139, 34, 0.24), transparent 70%),
+    radial-gradient(16vw 16vw at 52% 48%, rgba(255, 20, 147, 0.14), transparent 70%);
+  filter: blur(42px);
+  animation: blobDrift 24s ease-in-out infinite alternate;
+}
+@keyframes blobDrift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(2.5%, -2%, 0) scale(1.07); }
+  100% { transform: translate3d(-2.5%, 2%, 0) scale(1.03); }
+}
+
+/* comic sunburst rays + sparkle stickers behind the hero */
+.hero { position: relative; overflow: hidden; }
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -40%; left: 50%;
+  width: 130%; height: 180%;
+  transform: translateX(-50%);
+  z-index: 0;
+  pointer-events: none;
+  background: repeating-conic-gradient(from 0deg at 50% 42%,
+    rgba(255, 20, 147, 0.09) 0deg 5deg, transparent 5deg 14deg);
+  -webkit-mask-image: radial-gradient(closest-side, #000 25%, transparent 72%);
+          mask-image: radial-gradient(closest-side, #000 25%, transparent 72%);
+  animation: spinSlow 90s linear infinite;
+}
+@keyframes spinSlow { to { transform: translateX(-50%) rotate(360deg); } }
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0c1 8 4 11 12 12-8 1-11 4-12 12-1-8-4-11-12-12 8-1 11-4 12-12z' fill='%23FF1493'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0c1 8 4 11 12 12-8 1-11 4-12 12-1-8-4-11-12-12 8-1 11-4 12-12z' fill='%2300E5FF'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0c1 8 4 11 12 12-8 1-11 4-12 12-1-8-4-11-12-12 8-1 11-4 12-12z' fill='%23FFD700'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 6% 24%, 90% 36%, 64% 82%;
+  background-size: 50px, 34px, 42px;
+  animation: twinkle 4s ease-in-out infinite;
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.85; }
+  50%      { opacity: 0.35; }
+}
+.hero .container { position: relative; z-index: 1; }
+
+/* let the colour show through the section bands */
+.door-band {
+  background:
+    radial-gradient(60% 130% at 50% 0%, rgba(0, 229, 255, 0.14), transparent 70%),
+    radial-gradient(60% 130% at 50% 100%, rgba(255, 20, 147, 0.12), transparent 70%),
+    rgba(248, 249, 250, 0.86);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before, .hero::before, .hero::after { animation: none; }
 }
