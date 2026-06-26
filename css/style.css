@@ -16,6 +16,9 @@
   --green-soft: #3bbf3b;
   --yellow:     #FFD700;
   --yellow-deep:#e6b800;
+  --purple:     #8A2BE2;
+  --purple-deep:#6A0DAD;
+  --orange:     #FF7A00;
 
   /* Crisp retail base */
   --bg:        #FFFFFF;
@@ -608,11 +611,13 @@ body::before {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(22vw 22vw at 12% 16%, rgba(255, 20, 147, 0.34), transparent 70%),
-    radial-gradient(26vw 26vw at 88% 10%, rgba(0, 229, 255, 0.32), transparent 70%),
-    radial-gradient(24vw 24vw at 80% 84%, rgba(255, 215, 0, 0.30), transparent 70%),
-    radial-gradient(22vw 22vw at 14% 88%, rgba(34, 139, 34, 0.24), transparent 70%),
-    radial-gradient(16vw 16vw at 52% 48%, rgba(255, 20, 147, 0.14), transparent 70%);
+    radial-gradient(22vw 22vw at 10% 14%, rgba(255, 20, 147, 0.34), transparent 70%),
+    radial-gradient(24vw 24vw at 86% 10%, rgba(138, 43, 226, 0.32), transparent 70%),
+    radial-gradient(26vw 26vw at 92% 52%, rgba(0, 229, 255, 0.30), transparent 70%),
+    radial-gradient(24vw 24vw at 78% 86%, rgba(255, 215, 0, 0.28), transparent 70%),
+    radial-gradient(22vw 22vw at 14% 86%, rgba(34, 139, 34, 0.24), transparent 70%),
+    radial-gradient(20vw 20vw at 40% 60%, rgba(255, 122, 0, 0.20), transparent 70%),
+    radial-gradient(16vw 16vw at 52% 40%, rgba(138, 43, 226, 0.16), transparent 70%);
   filter: blur(42px);
   animation: blobDrift 24s ease-in-out infinite alternate;
 }
@@ -668,6 +673,34 @@ body::before {
     rgba(248, 249, 250, 0.86);
 }
 
+/* rainbow neon LED light strip across the top, like the store wall */
+.site-header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #FF1493, #8A2BE2, #3b82f6, #00E5FF, #228B22, #FFD700, #FF7A00, #FF1493);
+  background-size: 200% 100%;
+  box-shadow: 0 0 12px rgba(255, 20, 147, 0.6);
+  animation: ledFlow 6s linear infinite;
+  z-index: 2;
+}
+@keyframes ledFlow { to { background-position: -200% 0; } }
+
+/* hanging ivy vine garland draped over the top, like the display cases */
+main { position: relative; }
+main::before {
+  content: "";
+  position: absolute;
+  top: -8px; left: 0; right: 0;
+  height: 64px;
+  z-index: 5;
+  pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='64' viewBox='0 0 150 64'%3E%3Cg fill='%23228B22'%3E%3Cellipse cx='22' cy='20' rx='9' ry='17' transform='rotate(-25 22 20)'/%3E%3Cellipse cx='52' cy='28' rx='8' ry='15' transform='rotate(15 52 28)'/%3E%3Cellipse cx='84' cy='18' rx='9' ry='17' transform='rotate(-15 84 18)'/%3E%3Cellipse cx='112' cy='30' rx='8' ry='15' transform='rotate(20 112 30)'/%3E%3Cellipse cx='138' cy='20' rx='9' ry='16' transform='rotate(-22 138 20)'/%3E%3C/g%3E%3Cg fill='%233bbf3b'%3E%3Cellipse cx='36' cy='38' rx='7' ry='13' transform='rotate(10 36 38)'/%3E%3Cellipse cx='68' cy='44' rx='7' ry='13' transform='rotate(-12 68 44)'/%3E%3Cellipse cx='98' cy='42' rx='7' ry='13' transform='rotate(8 98 42)'/%3E%3Cellipse cx='126' cy='46' rx='7' ry='13' transform='rotate(-10 126 46)'/%3E%3C/g%3E%3C/svg%3E") repeat-x top center;
+  background-size: 150px 64px;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.14));
+}
+
 @media (prefers-reduced-motion: reduce) {
-  body::before, .hero::before, .hero::after { animation: none; }
+  body::before, .hero::before, .hero::after, .site-header::before { animation: none; }
 }
