@@ -12,10 +12,16 @@ no dependencies. Open `index.html` in a browser, or serve the folder.
 - `new.html`: what just landed on the shelf. Sapphire/diamond-themed.
 
 ## Theme
-Built straight off the logo: black field, **gold** for headings/buttons/dividers,
-**dragon-red** for the live "look here" tags, the **four gems** labeling the four
-pages, a **d20 "20"** beside section titles, a faint coin pile, and **fire-orange**
-as the one hover/live accent.
+Vibrant Otaku Pop-Art. A crisp white lightbox base lets the content pop, with
+**neon magenta** (#FF1493) as the primary accent, **hyper cyan** (#00E5FF) as the
+secondary, **jungle green** (#228B22) for fresh and subtle touches, and **Pikachu
+yellow** (#FFD700) on the call-to-action buttons. Neon CSS glows mimic backlit
+acrylic signage, tight grids echo the Funko walls and dice bins, and a faint green
+vine watermark in the footer nods to the store's faux foliage.
+
+Display font is **Mouse Memoirs** (Google Fonts) for that whimsical, magical feel,
+paired with **Nunito** for clean, readable body text. The d20 "20" still marks
+section titles, recoloured neon pink.
 
 ## Add the logo
 Drop the dragon logo image at:

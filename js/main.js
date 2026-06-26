@@ -28,15 +28,15 @@
       box.className = img.getAttribute("data-fallback-class") || "brand__logo";
       box.style.display = "grid";
       box.style.placeItems = "center";
-      box.style.fontFamily = '"Cinzel", Georgia, serif';
-      box.style.color = "var(--gold)";
+      box.style.fontFamily = '"Mouse Memoirs", sans-serif';
+      box.style.color = "var(--pink-deep)";
       box.style.textAlign = "center";
       box.style.fontSize = img.classList.contains("hero__logo") ? "1rem" : "1.1rem";
-      box.style.border = "1px dashed var(--gold-deep)";
+      box.style.border = "1px dashed var(--pink)";
       if (img.classList.contains("hero__logo")) {
         box.className = "hero__logo hero__logo--placeholder";
         box.innerHTML =
-          '<div><strong style="font-size:1.4rem;color:var(--gold-bright)">Dragon’s Den</strong>' +
+          '<div><strong style="font-size:1.6rem;color:var(--pink-deep)">Dragon’s Den</strong>' +
           '<br><span style="color:var(--ink-mute);font-size:0.85rem;letter-spacing:0.1em">' +
           "Drop logo at images/logo.png</span></div>";
       } else {
